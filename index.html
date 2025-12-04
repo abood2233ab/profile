@@ -14,9 +14,43 @@
     </audio>
 
     <div class="sound-control" onclick="toggleSound()">
-        <span id="soundText">SOUND OFF</span>
+        <span id="soundText">🔇 SOUND OFF</span>
     </div>
 
     <div class="container">
         <div class="hacker-image">
-            <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMTEhUTExMWFhgfGh4fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHyAfIx8fHy
+            <img src="https://i.imgur.com/2k3x9pP.jpeg" alt="ABDULRAHMAN ALZOMOR" />
+        </div>
+        <h1 class="glitch" data-text="HACKED">HACKED</h1>
+        <h2 class="name">ABDULRAHMAN ALZOMOR</h2>
+        <p class="tagline">Root Access Granted • Fear The Unknown</p>
+        
+        <div class="neon-light"></div>
+        <div class="neon-light2"></div>
+    </div>
+
+    <div id="scaryMessage">
+        <h1>YOUR SYSTEM HAS BEEN HACKED</h1>
+        <p class="terminal-text">All your files are encrypted • Pay 10 BTC or lose everything<br>root@abdulrahman:~# rm -rf / --no-preserve-root</p>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        const audio = document.getElementById('hackerSound');
+        audio.volume = 0.5;
+        setTimeout(() => {
+            document.getElementById('scaryMessage').classList.add('show');
+            document.body.style.animation = 'shake 0.5s infinite';
+        }, 4000);
+        function toggleSound() {
+            if (audio.paused) {
+                audio.play();
+                document.getElementById('soundText').textContent = '🔊 SOUND ON';
+            } else {
+                audio.pause();
+                document.getElementById('soundText').textContent = '🔇 SOUND OFF';
+            }
+        }
+    </script>
+</body>
+</html>
