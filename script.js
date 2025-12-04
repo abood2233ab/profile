@@ -6,8 +6,8 @@ canvas.height = window.innerHeight;
 
 const letters = '01100101 ABDULRAHMAN ALZOMOR ⚠☢☣✞✈︎';
 const fontSize = 16;
-const columns = canvas.width / fontSize;
-const drops = Array(Math.floor(columns)).fill(1);
+let columns = canvas.width / fontSize;
+let drops = Array(Math.floor(columns)).fill(1);
 
 function draw() {
     ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
@@ -28,4 +28,12 @@ setInterval(draw, 33);
 window.addEventListener('resize', () => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
+    columns = canvas.width / fontSize;
+    drops = Array(Math.floor(columns)).fill(1);
 });
+
+// تفعيل الاهتزاز والرسالة المرعبة بعد 4 ثواني
+setTimeout(() => {
+    document.getElementById('scaryMessage').classList.add('show');
+    document.body.style.animation = 'shake 0.5s infinite';
+}, 4000);
